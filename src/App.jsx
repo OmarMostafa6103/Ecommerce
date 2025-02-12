@@ -1,6 +1,6 @@
 
 import './App.css'
-import {createBrowserRouter, RouterProvider } from 'react-router-dom'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Layout from './Compomet/Layout/Layout'
 import Home from './Compomet/Home/Home'
 import Products from './Compomet/Products/Products'
@@ -26,25 +26,26 @@ import ForgetPass from './Compomet/ForgetPass/ForgetPass'
 import Profile from './Compomet/Profile/Profile'
 let client = new QueryClient();
 const router = createBrowserRouter([
-  {path:"" , element:<Layout/>,
-    children:[{index:true,element: <ProtectedRoute> <Home/> </ProtectedRoute>},
-      {path:"Products",element:<ProtectedRoute> <Products/> </ProtectedRoute>},
-      {path:"Brands",element:<ProtectedRoute> <Brands/> </ProtectedRoute>},
-      {path:"cart",element:<ProtectedRoute> <Cart/> </ProtectedRoute>},
-      {path:"WishList",element:<ProtectedRoute> <WishList/> </ProtectedRoute>},
-      {path:"Payment",element:<ProtectedRoute> <Payment/> </ProtectedRoute>},
-      {path:"Profile",element:<ProtectedRoute> <Profile/> </ProtectedRoute>},
-      {path: "allorders", element: <ProtectedRoute> <AllOrder /> </ProtectedRoute>},
-      {path:"Categories",element:<ProtectedRoute> <Categories/> </ProtectedRoute>},
-      {path:"ProductDetails/:id/:category",element:<ProtectedRoute> <ProductDetails/> </ProtectedRoute>},
-      {path:"Footer",element:<Footer/>},
-      {path:"Login",element:<Login/>},
-      {path:"ForgetPass",element:<ForgetPass/>},
-      {path:"Navbar",element:<Navbar/>},
-      {path:"*",element:<Not_found_page/>},
-      {path:"Register",element:<Register/>},
+  {
+    path: "", element: <Layout />,
+    children: [{ index: true, element: <ProtectedRoute> <Home /> </ProtectedRoute> },
+    { path: "Products", element: <ProtectedRoute> <Products /> </ProtectedRoute> },
+    { path: "Brands", element: <ProtectedRoute> <Brands /> </ProtectedRoute> },
+    { path: "cart", element: <ProtectedRoute> <Cart /> </ProtectedRoute> },
+    { path: "WishList", element: <ProtectedRoute> <WishList /> </ProtectedRoute> },
+    { path: "Payment", element: <ProtectedRoute> <Payment /> </ProtectedRoute> },
+    { path: "Profile", element: <ProtectedRoute> <Profile /> </ProtectedRoute> },
+    { path: "allorders", element: <ProtectedRoute> <AllOrder /> </ProtectedRoute> },
+    { path: "Categories", element: <ProtectedRoute> <Categories /> </ProtectedRoute> },
+    { path: "ProductDetails/:id/:category", element: <ProtectedRoute> <ProductDetails /> </ProtectedRoute> },
+    { path: "Footer", element: <Footer /> },
+    { path: "Login", element: <Login /> },
+    { path: "ForgetPass", element: <ForgetPass /> },
+    { path: "Navbar", element: <Navbar /> },
+    { path: "*", element: <Not_found_page /> },
+    { path: "Register", element: <Register /> },
     ]
-   }
+  }
 
 
 ])
@@ -57,9 +58,8 @@ function App() {
           <CardContext>
             <QueryClientProvider client={client}>
               <RouterProvider router={router}>
-                 
               </RouterProvider>
-                <Toaster/>
+              <Toaster />
             </QueryClientProvider>
           </CardContext>
         </UserContext>
