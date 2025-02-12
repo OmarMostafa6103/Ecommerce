@@ -2,7 +2,7 @@
   "name": "app1",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://OmarMostafa6103.github.io/Final-Project1",
+  "homepage": "https://github.com/OmarMostafa6103/E-commers.git",
   "type": "module",
   "scripts": {
     "dev": "vite",
