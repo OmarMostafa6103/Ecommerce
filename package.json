@@ -2,7 +2,7 @@
   "name": "app1",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://OmarMostafa6103.github.io/e-commers/",
+  "homepage": "https://github.com/OmarMostafa6103/Ecommerce.git",
   "type": "module",
   "scripts": {
     "dev": "vite",
