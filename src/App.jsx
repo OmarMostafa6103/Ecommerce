@@ -50,7 +50,7 @@ const router = createBrowserRouter([
 
 ])
 function App() {
-
+  console.log("App loaded!")
   return (
     <div className="dark:bg-slate-950 bg-white">
       <DarkModeContext>
