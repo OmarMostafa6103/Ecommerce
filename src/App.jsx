@@ -25,32 +25,64 @@ import WishList from './Compomet/WishList.jsx/WishList'
 import ForgetPass from './Compomet/ForgetPass/ForgetPass'
 import Profile from './Compomet/Profile/Profile'
 let client = new QueryClient();
+
+
+// const router = createBrowserRouter([
+//   {
+//     path: "", element: <Layout />,
+//     children: [{ index: true, element: <ProtectedRoute> <Home /> </ProtectedRoute> },
+//     { path: "Products", element: <ProtectedRoute> <Products /> </ProtectedRoute> },
+//     { path: "Brands", element: <ProtectedRoute> <Brands /> </ProtectedRoute> },
+//     { path: "cart", element: <ProtectedRoute> <Cart /> </ProtectedRoute> },
+//     { path: "WishList", element: <ProtectedRoute> <WishList /> </ProtectedRoute> },
+//     { path: "Payment", element: <ProtectedRoute> <Payment /> </ProtectedRoute> },
+//     { path: "Profile", element: <ProtectedRoute> <Profile /> </ProtectedRoute> },
+//     { path: "allorders", element: <ProtectedRoute> <AllOrder /> </ProtectedRoute> },
+//     { path: "Categories", element: <ProtectedRoute> <Categories /> </ProtectedRoute> },
+//     { path: "ProductDetails/:id/:category", element: <ProtectedRoute> <ProductDetails /> </ProtectedRoute> },
+//     { path: "Footer", element: <Footer /> },
+//     { path: "Login", element: <Login /> },
+//     { path: "ForgetPass", element: <ForgetPass /> },
+//     { path: "Navbar", element: <Navbar /> },
+//     { path: "*", element: <Not_found_page /> },
+//     { path: "Register", element: <Register /> },
+//     ]
+//   }
+// ])
+
 const router = createBrowserRouter([
   {
-    path: "", element: <Layout />,
-    children: [{ index: true, element: <ProtectedRoute> <Home /> </ProtectedRoute> },
-    { path: "Products", element: <ProtectedRoute> <Products /> </ProtectedRoute> },
-    { path: "Brands", element: <ProtectedRoute> <Brands /> </ProtectedRoute> },
-    { path: "cart", element: <ProtectedRoute> <Cart /> </ProtectedRoute> },
-    { path: "WishList", element: <ProtectedRoute> <WishList /> </ProtectedRoute> },
-    { path: "Payment", element: <ProtectedRoute> <Payment /> </ProtectedRoute> },
-    { path: "Profile", element: <ProtectedRoute> <Profile /> </ProtectedRoute> },
-    { path: "allorders", element: <ProtectedRoute> <AllOrder /> </ProtectedRoute> },
-    { path: "Categories", element: <ProtectedRoute> <Categories /> </ProtectedRoute> },
-    { path: "ProductDetails/:id/:category", element: <ProtectedRoute> <ProductDetails /> </ProtectedRoute> },
-    { path: "Footer", element: <Footer /> },
-    { path: "Login", element: <Login /> },
-    { path: "ForgetPass", element: <ForgetPass /> },
-    { path: "Navbar", element: <Navbar /> },
-    { path: "*", element: <Not_found_page /> },
-    { path: "Register", element: <Register /> },
-    ]
-  }
+    path: "",
+    element: <Layout />,
+    children: [
+      { index: true, element: <Login /> }, // اجعل تسجيل الدخول الصفحة الأولى
+      { path: "Login", element: <Login /> },
+      { path: "Register", element: <Register /> },
+      { path: "ForgetPass", element: <ForgetPass /> },
+
+      // الصفحات المحمية بالتوكين
+      { path: "Home", element: <ProtectedRoute> <Home /> </ProtectedRoute> },
+      { path: "Products", element: <ProtectedRoute> <Products /> </ProtectedRoute> },
+      { path: "Brands", element: <ProtectedRoute> <Brands /> </ProtectedRoute> },
+      { path: "cart", element: <ProtectedRoute> <Cart /> </ProtectedRoute> },
+      { path: "WishList", element: <ProtectedRoute> <WishList /> </ProtectedRoute> },
+      { path: "Payment", element: <ProtectedRoute> <Payment /> </ProtectedRoute> },
+      { path: "Profile", element: <ProtectedRoute> <Profile /> </ProtectedRoute> },
+      { path: "allorders", element: <ProtectedRoute> <AllOrder /> </ProtectedRoute> },
+      { path: "Categories", element: <ProtectedRoute> <Categories /> </ProtectedRoute> },
+      { path: "ProductDetails/:id/:category", element: <ProtectedRoute> <ProductDetails /> </ProtectedRoute> },
+
+      { path: "Footer", element: <Footer /> },
+      { path: "Navbar", element: <Navbar /> },
+
+      { path: "*", element: <Not_found_page /> },
+    ],
+  },
+]);
 
 
-])
+
 function App() {
-  console.log("App loaded!")
   return (
     <div className="dark:bg-slate-950 bg-white">
       <DarkModeContext>
