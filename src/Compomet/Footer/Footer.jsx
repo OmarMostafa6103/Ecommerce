@@ -1,5 +1,5 @@
-import React, { useContext, useEffect, useState } from 'react';
-import SocialMedia from '../SocialMedia/SocialMedia';
+import React, { useContext, useEffect, useState } from "react";
+import SocialMedia from "../SocialMedia/SocialMedia";
 import logo from "../../assets/letter-u-shopping-cart-logo-alphabet-u-online-store-icon_1113277-321-removebg-preview.png";
 
 export default function Footer() {
@@ -9,14 +9,13 @@ export default function Footer() {
         <div className="md:flex md:justify-between flex-col">
           <div className="mb-6 md:mb-0 flex">
             <img src={logo} className="h-8 me-3" alt="FlowBite Logo" />
-            <h2 className='dark:text-white text-3xl'>Shopping</h2>
+            <h2 className="dark:text-white text-3xl">Shopping</h2>
           </div>
-
         </div>
         <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
         <div className="sm:flex sm:items-center sm:justify-between">
           <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
-            © 2024 Shady Sherif. All Rights Reserved.
+            © 2024 Omar mostafa. All Rights Reserved.
           </span>
           <div className="flex mt-4 sm:justify-center sm:mt-0 gap-5">
             <SocialMedia />
